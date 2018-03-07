@@ -22,6 +22,8 @@ router.post('/', function(req, res){
 	
 		
 	};
+
+	console.log(user);
 	
 		//res.send(user);
 		//console.log(user);
@@ -31,7 +33,7 @@ router.post('/', function(req, res){
 		{
 			//res.render('home/index');
 			//res.redirect('/registration');
-			res.send("successfullooooo");
+			res.send("successfull");
 			//res.redirect('/home');
 			//res.redirect('/registration');
 		}
