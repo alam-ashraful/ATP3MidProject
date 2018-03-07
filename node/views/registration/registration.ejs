@@ -1,0 +1,115 @@
+
+<!------ Include the above in your HEAD tag -->
+
+	<% include ../partials/head %> 
+
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+		<!-- Website CSS style -->
+		
+		<title>Admin</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row main">
+				<div class="main-login main-center">
+				<h5>Create Account</h5>
+					<form class="" method="post">
+						
+						
+
+						<div class="form-group">
+							<label for="email" class="cols-sm-2 control-label">Your Email</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
+								</div>
+								<p id='emailalart' class="hidden">This Email has already been used</p>
+								<p id='emailalartval'  class="hidden">xxxxxxxx  </p>
+
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="username" class="cols-sm-2 control-label">Username</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="username" id="username"  placeholder="Enter your Username"/>
+								</div>
+								<p id='useralart'  class="hidden">This Username has already been used</p>
+								<p id='useralartmin'  class="hidden">xxxxxxxx  </p>
+						
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="password" class="cols-sm-2 control-label">Password</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+									<input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
+
+								</div>
+								<p id='passalartval'  class="hidden">password required  </p>
+
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+									<input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Confirm your Password"/>
+								</div>
+								<p id='conpassalartval'  class="hidden">Password doesnot matched</p>
+							</div>
+						</div>
+
+
+						<div class="form-group">
+							<label for="Contact" class="cols-sm-2 control-label">Contact No</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt" aria-hidden="true"></i></span>
+									<input type="text"  class="form-control" name="contact" id="contact"  placeholder="Enter your Mobile Number"/>
+								</div>
+								<p id='contactalart' class="hidden">This Contact number has already been used</p>
+								<p id='contactalartval'  class="hidden">xxxxxxxx  </p>
+							</div>
+						</div>
+
+
+							<div class="form-group">
+							<label for="Address" class="cols-sm-2 control-label">Address</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-home" aria-hidden="true"></i></span>
+								
+									<textarea class="form-control" class="hidden" name="address" id="address"  placeholder="Enter your address.."></textarea>
+								</div>
+								<p id='addressalartval'  class="hidden">Address required</p>
+								
+							</div>
+						</div>
+
+						<div class="form-group ">
+						
+							 <button type="submit" class="btn btn-primary btn-lg font"  id="submit">Register</button>
+						</div>
+						
+					</form>
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>
+<p>Click <a href="/home">here</a> to home</p>
+
