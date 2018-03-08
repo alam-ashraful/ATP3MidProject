@@ -241,12 +241,36 @@ var conpassField = $("#confirm");
      						}
      					});
 				});
+
  $("#submit").prop("disabled", true);
 	var submitField = $("#submit");
 	submitField.bind("click", function() {
 		var email=$("#email").val();
 		console.log(email);
 		 $("#submit").prop("disabled", true);
+	});
+
+	var userNameField = $("#userName");
+	$("#submitt").prop("disabled", true);
+	userNameField.on("change", function() {
+	var value = userNameField.val();
+	console.log(value);
+
+	$.post("/uniqueuser/user", { value }, function(data, xhr) {
+									 
+							
+									if (data)
+									{
+										  $("#submitt").prop("disabled", false);
+									$('#usernamealart').addClass("hidden");
+									}
+									else
+									{
+										 $("#submitt").prop("disabled", true);
+									$('#usernamealart').removeClass("hidden");
+									}
+		
+								})
 	});
 
 

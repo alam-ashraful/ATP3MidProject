@@ -74,15 +74,16 @@ router.post('/email',function(req,res){
 	});
 
 
-/*
-router.post('/contact',function(req,res){
-	var data={ contact : req.body.value };
+
+router.post('/user',function(req,res){
+	var data={ username : req.body.value };
+	
 	checkModel.getUser(data,function(valid)
 	{
 		res.send(valid);
 	});
 });
-*/
+
 
 router.post('/contact',function(req,res){
 	var data={ contact: req.body.value };
