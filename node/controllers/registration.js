@@ -32,13 +32,13 @@ router.post('/', function(req, res){
 		if(valid)
 		{
 			//res.render('home/index');
-			//res.redirect('/registration');
-			res.send("successfull");
+			res.redirect('/registration');
+			// res.send("successfull");
 			//res.redirect('/home');
 			//res.redirect('/registration');
 		}
 		else
-		{		res.send("successfull");
+		{		res.send("unsuccessfull");
 			//res.redirect('/registration');
 		}
 

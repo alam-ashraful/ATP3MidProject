@@ -18,9 +18,9 @@ router.post('/', function(req, res){
 	loginModel.validateUser(user, function(valid){
 		if(valid)
 		{
-			res.send('loged in');
+			// res.send('loged in');
 			//req.session.loggedUser = user;
-			//res.redirect('/home');
+			res.redirect('/home');
 		}
 		else
 		{
