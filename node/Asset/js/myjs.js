@@ -242,13 +242,6 @@ var conpassField = $("#confirm");
      					});
 				});
 
- $("#submit").prop("disabled", true);
-	var submitField = $("#submit");
-	submitField.bind("click", function() {
-		var email=$("#email").val();
-		console.log(email);
-		 $("#submit").prop("disabled", true);
-	});
 
 	var userNameField = $("#userName");
 	$("#submitt").prop("disabled", true);
