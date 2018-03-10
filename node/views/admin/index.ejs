@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>Username</th>
+			<th>Password</th>
+		</tr>
+		<tr>
+			<% for(var i=0; i<adminInfo.length; i++) { %>
+			<td><%= adminInfo[i].username %></td>
+			<td><%= adminInfo[i].password %></td>
+			<% } %>
+		</tr>
+		<tr>
+			<td>Go to</td>
+			<td><a href="/admin/product">Product</a></td>
+		</tr>
+	</table>
+</body>
+</html>

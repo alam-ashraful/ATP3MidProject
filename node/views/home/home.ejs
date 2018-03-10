@@ -43,16 +43,16 @@
 		    If you want to make it really neat i suggest you look into an alternative like http://areaaperta.com/nicescroll/
 		    This will allow the menu to say fixed on body scoll and scoll on the side bar if it get to large
 		*/
-		/*.absolute-wrapper{
+		.absolute-wrapper{
 		    position: fixed;
 		    width: 300px;
 		    height: 100%;
 		    background-color: #f8f8f8;
 		    border-right: 1px solid #e7e7e7;
-		}*/
+		}
 
 		.side-menu {
-		  position: fixed;
+		  position: absolute;
 		  width: 300px;
 		  height: 100%;
 		  background-color: #f8f8f8;
@@ -129,7 +129,7 @@
 		  background-color: #f3f3f3;
 		  border: 0;
 		  border-radius: 0;
-		  position: absolute;
+		  position: fixed;
 		  top: 0;
 		  right: 0;
 		  padding: 15px 18px;
@@ -141,7 +141,7 @@
 		  display: block;
 		}
 		.side-menu #search {
-		  position: relative;
+		  position: absolute;
 		  z-index: 1000;
 		}
 		.side-menu #search .panel-body {
@@ -152,12 +152,12 @@
 		  padding-right: 50px;
 		  width: 100%;
 		  margin: 0;
-		  position: relative;
+		  position: absolute;
 		  border-top: 1px solid #e7e7e7;
 		}
 		.side-menu #search .panel-body .navbar-form .form-group {
 		  width: 100%;
-		  position: relative;
+		  position: fixed;
 		}
 		.side-menu #search .panel-body .navbar-form input {
 		  border: 0;
@@ -182,7 +182,7 @@
 		/* small screen */
 		@media (max-width: 768px) {
 		  .side-menu {
-		    position: relative;
+		    position: absolute;
 		    width: 100%;
 		    height: 0;
 		    border-right: 0;
@@ -252,7 +252,7 @@
 		  }
 		  .side-menu-container > .navbar-nav {
 		    /* Add position:absolute for scrollable menu -> see top comment */
-		    position: fixed;
+		    position: absolute;
 		    left: -300px;
 		    width: 300px;
 		    top: 43px;
@@ -267,7 +267,7 @@
 		    transform-style: preserve-3d;
 		  }
 		  /* Uncomment for scrollable menu -> see top comment */
-		  /*.absolute-wrapper{
+		  .slide-in{
 		        width:285px;
 		        -moz-animation: slideout 300ms forwards;
 		        -o-animation: slideout 300ms forwards;
@@ -275,7 +275,7 @@
 		        animation: slideout 300ms forwards;
 		        -webkit-transform-style: preserve-3d;
 		        transform-style: preserve-3d;
-		    }*/
+		    }
 		  @-moz-keyframes bodyslidein {
 		    0% {
 		      left: 0;
@@ -393,16 +393,16 @@
 		    If you want to make it really neat i suggest you look into an alternative like http://areaaperta.com/nicescroll/
 		    This will allow the menu to say fixed on body scoll and scoll on the side bar if it get to large
 		*/
-		/*.absolute-wrapper{
+		.absolute-wrapper{
 		    position: fixed;
 		    width: 300px;
 		    height: 100%;
 		    background-color: #f8f8f8;
 		    border-right: 1px solid #e7e7e7;
-		}*/
+		}
 
 		.side-menu {
-		  position: fixed;
+		  position: absolute;
 		  width: 300px;
 		  height: 100%;
 		  background-color: #f8f8f8;
@@ -491,7 +491,7 @@
 		  display: block;
 		}
 		.side-menu #search {
-		  position: relative;
+		  position: absolute;
 		  z-index: 1000;
 		}
 		.side-menu #search .panel-body {
@@ -502,7 +502,7 @@
 		  padding-right: 50px;
 		  width: 100%;
 		  margin: 0;
-		  position: relative;
+		  position: absolute;
 		  border-top: 1px solid #e7e7e7;
 		}
 		.side-menu #search .panel-body .navbar-form .form-group {
@@ -532,7 +532,7 @@
 		/* small screen */
 		@media (max-width: 768px) {
 		  .side-menu {
-		    position: relative;
+		    position: absolute;
 		    width: 100%;
 		    height: 0;
 		    border-right: 0;
@@ -602,7 +602,7 @@
 		  }
 		  .side-menu-container > .navbar-nav {
 		    /* Add position:absolute for scrollable menu -> see top comment */
-		    position: fixed;
+		    position: absolute;
 		    left: -300px;
 		    width: 300px;
 		    top: 43px;
@@ -617,7 +617,7 @@
 		    transform-style: preserve-3d;
 		  }
 		  /* Uncomment for scrollable menu -> see top comment */
-		  /*.absolute-wrapper{
+		  .slide-in{
 		        width:285px;
 		        -moz-animation: slideout 300ms forwards;
 		        -o-animation: slideout 300ms forwards;
@@ -625,7 +625,7 @@
 		        animation: slideout 300ms forwards;
 		        -webkit-transform-style: preserve-3d;
 		        transform-style: preserve-3d;
-		    }*/
+		    }
 		  @-moz-keyframes bodyslidein {
 		    0% {
 		      left: 0;
@@ -712,7 +712,7 @@
 		  }
 		  .navbar-header {
 		    /* this is probably redundant */
-		    position: fixed;
+		    position: redundant;
 		    z-index: 3;
 		    background-color: #f8f8f8;
 		  }
@@ -726,7 +726,7 @@
 <body>
 	<div class="row">
     <!-- uncomment code for absolute positioning tweek see top comment in css -->
-    <!-- <div class="absolute-wrapper"> </div> -->
+    <div class="absolute-wrapper"> </div>
     <!-- Menu -->
     <div class="side-menu">
     

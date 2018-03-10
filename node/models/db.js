@@ -76,9 +76,36 @@ module.exports = {
 			});
 		}
 
-	}
+	},
 
-	};
+	getAdminData: function(sql, param, callback){
+		connection.query(sql, param, function(err, res){
+			if(err)
+			{
+				console.log(err);
+				callback(null);
+			}
+			else
+			{
+				callback(res);
+			}
+		});
+	},
+
+	getProductData: function(sql, callback){
+		connection.query(sql, function(err, res){
+			if(err)
+			{
+				console.log(err);
+				callback(null);
+			}
+			else
+			{
+				callback(res);
+			}
+		});
+	}
+};
 
 	
 	
