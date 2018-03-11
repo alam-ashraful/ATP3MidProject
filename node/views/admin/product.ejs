@@ -41,8 +41,8 @@
 						
                           <tr>
                             <td align="center">
-                              <a class="btn btn-default" href="/admin/edit?id=<%= productInfo[i].id %>"><em class="fa fa-pencil"></em></a>
-                              <a class="btn btn-danger" href="/admin/delete?id=<%= productInfo[i].id %>"><em class="fa fa-trash"></em></a>
+                              <a class="btn btn-default" href="/admin/edit/<%= productInfo[i].id %>"><em class="fa fa-pencil"></em></a>
+                              <a class="btn btn-danger" href="/admin/delete/<%= productInfo[i].id %>"><em class="fa fa-trash"></em></a>
                             </td>
                             <td class="hidden-xs"><%= productInfo[i].id %></td>
                             <td><%= productInfo[i].productname %></td>

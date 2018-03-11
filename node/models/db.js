@@ -104,6 +104,21 @@ module.exports = {
 				callback(res);
 			}
 		});
+	},
+
+	deleteProductData: function(sql, callback){
+		connection.query(sql, function(err, res){
+			if(err)
+			{
+				console.log(sql);
+				console.log('working here'+err);
+				callback(null);
+			}
+			else
+			{
+				callback(res);
+			}
+		});
 	}
 };
 

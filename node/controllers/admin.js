@@ -21,6 +21,51 @@ router.get('/product', function(req, res){
 	});
 });
 
+router.get('/edit:id', function(req, res){
+
+	var productId = req.params.id;
+
+	adminModel.editProductData(function(productId){
+
+	});
+
+	res.render('admin/product');
+});
+
+router.get('/delete/:id', function(req, res){
+/*
+	var productId = {
+		productId: req.params.id
+	}
+
+	console.log(productId);
+
+	if(productId!=null){
+		adminModel.deleteProductData(function(object){
+			res.render('admin/product');
+		});
+	}else{
+		res.render('admin/product');
+	}*/
+	var id = req.params.id;
+	
+	var mysql = require('mysql');
+	var connection = mysql.createConnection({
+	  host: 'localhost',
+	  user: 'root',
+	  password: '',
+	  database: 'project'
+	});
+
+	connection.query("DELETE FROM product  WHERE id = ? ",[id], function(err, rows)
+    {
+         if(err)
+             console.log("Error deleting : %s ",err );
+        
+         res.redirect('/admin/product');
+         
+    });
+});
 
 /*
 router.post('/', function(req, res){
