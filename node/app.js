@@ -13,6 +13,7 @@ var login = require('./controllers/login');
 var registration = require('./controllers/registration');
 var checkUser=require('./controllers/uniqueuser');
 var admin = require('./controllers/admin');
+var insetProduct = require('./controllers/insertProduct');
 
 
 
@@ -49,6 +50,7 @@ app.use('/registration', registration);
 app.use('/uniqueuser',checkUser);
 app.use('/login',login);
 app.use('/admin',admin);
+app.use('/product',insetProduct);
 
 
 
