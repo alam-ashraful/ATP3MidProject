@@ -1,0 +1,85 @@
+<html>
+<body>
+
+<% include ../partials/head %> 
+
+		<% include ../partials/header %>
+		<% var count=1; %>
+
+<content>
+	<table style="width:100%" border="0" cellpadding="70" cellspacing="0">
+		<tr>
+			<td valign="top">
+				<% include ../partials/sidebar%>
+			</td>
+			
+			<td >
+					
+					<table border="0" >
+						<tr>
+					
+							<% if(typeof errs !== 'undefined'){ %>		
+					
+			<% for(var i = 0; i < errs.length; i++) { %>
+
+						<td>
+				 		<table border="0">
+							<tr>
+							<td colspan="5"><a href='/detail?product_id=<%=errs[i].product_id %>'> <img src="<%= errs[i].picture %>" 		 style= "width:290px;height:230px "></a>
+									  </td>
+							</tr>
+						<tr>
+							<td colspan="5"><%= errs[i].product_name %></td>
+					 	</tr>
+						<tr>
+							<td colspan=" 3" >  ৳  <%= errs[i].price %></td>
+							<td align= "right"> <a href='/detail?product_id=<%=errs[i].product_id %>'> <button type="button"  >Buy Now</button> </a></td>
+						</tr>
+
+							<% count++ %>
+
+							<% if(count%4==0){    %>
+					   		</table>
+							</td>
+						    <tr>
+					<%   } else { %>
+						 	</table>
+							</td> 
+					<%   } %>
+
+						
+						
+							
+
+
+
+
+							
+								<% } %>
+								<% } %>
+
+								</tr>
+					 		</table>
+				
+			</tr>
+		</table>
+
+		
+	
+	<br/>
+	<br/>
+   
+	
+
+</content>
+<br/>
+<br/>
+<br/>
+<br/>
+<% include ../partials/footer %>
+</body>
+</html>
+
+
+
+

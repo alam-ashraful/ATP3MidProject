@@ -8,11 +8,18 @@ var expressSession=require('express-session');
 
 
 
+
+
 var home = require('./controllers/home');
 var login = require('./controllers/login');
 var registration = require('./controllers/registration');
 var checkUser=require('./controllers/uniqueuser');
 var admin = require('./controllers/admin');
+
+var productlist = require('./controllers/productlist');
+var productdetail = require('./controllers/detail');
+var cart = require('./controllers/cart');
+
 var insetProduct = require('./controllers/insertProduct');
 
 
@@ -24,6 +31,8 @@ app.set('view engine', 'ejs');
 //app.use(bodyParser());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, './Asset')));
+app.use(expressSession({secret: 'My top secret key', saveUninitialized: true, resave: false}));
+
 /*
 app.all('*',function(req,res,next){
 
@@ -50,6 +59,10 @@ app.use('/registration', registration);
 app.use('/uniqueuser',checkUser);
 app.use('/login',login);
 app.use('/admin',admin);
+app.use('/productlist',productlist);
+app.use('/detail',productdetail);
+app.use('/cart',cart);
+app.use('/product',insetProduct);
 app.use('/product',insetProduct);
 
 

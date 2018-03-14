@@ -1,22 +1,21 @@
 // Declaration
 var express = require('express');
 var router = express.Router();
-var home = require.main.require('./models/home');
+//var home = require.main.require('./models/home');
 
 
 // Request Handler
 router.get('/', function(req, res){
 
 
-	home.getdata(function(result){
+	
 
 		
     // console.log(result[2].id);
 	//res.send(result);
-		res.render('home/home',{ data: result});
+		res.render('home/home');
 
 
-});
 
 });
 /*

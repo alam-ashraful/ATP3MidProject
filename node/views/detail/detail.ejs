@@ -1,0 +1,98 @@
+<html>
+<style>
+	.picture img{
+		width:300px;
+		height:300px;
+    cursor: -moz-zoom-in; 
+    cursor: -webkit-zoom-in; 
+    cursor: zoom-in;
+	}
+	</style>
+<body>
+
+<% include ../partials/head %> 
+
+		<% include ../partials/header %>
+		<% var count=1; %>
+
+<content>
+	<table style="width:100%" border="0" cellpadding="70" cellspacing="0">
+		<tr>
+			<td valign="top">
+				<% include ../partials/sidebar%>
+			</td>
+			
+			<td >
+
+
+				<table   border="0" cellpadding="20" cellspacing="0">
+<form method="post" action="/detail?id=<%= errs[0].product_id %>">
+	<tr>
+		<td>
+		<div align="center" class="picture">
+			<img src="<%= errs[0].picture %>"  alt="Mountain View">
+		</div>
+		</td>
+		<td>
+		<div><font size = "4"><%= errs[0].product_name %></font></div><br/>
+
+
+		
+		<div><font size = "3">Size</font>
+		 
+		<select name="size">
+			
+			<option value="S">S</option>
+			<option value="L">L</option>
+			<option value="XL">XL</option>
+			<option value="XXL">XXL</option>
+	
+			
+				
+				
+		</select>
+		</div>
+		
+		<br/>
+		<div><font size = "4"> <input name='quantity' placeholder='quantity' size= 5></font></div><br/>
+		
+		<div><font size = "4"><b>TK  <%= errs[0].price %></b></font></div>
+		Discount : 5% 
+		
+		<div align="left">
+	<input type="submit" name="submit" value="BUY NO W!"  '"  size="30"> </input>
+	</div>
+		
+		</td>
+	</tr>
+	</form>
+	</table>
+
+
+
+
+			</td>	
+					
+		</tr>
+	</table>
+		
+
+		
+	
+	<br/>
+	<br/>
+   
+	
+
+</content>
+<br/>
+<br/>
+<br/>
+<br/>
+<% include ../partials/footer %>
+</body>
+</html>
+
+
+
+

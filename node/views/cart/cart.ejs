@@ -1,0 +1,142 @@
+<html>
+<body>
+
+<% include ../partials/head %> 
+
+		<% include ../partials/header %>
+
+<content>
+	<table  style="width:100%" border="0" cellpadding="70" cellspacing="0">
+		<tr>
+			<td valign="top">
+				<% include ../partials/sidebar%>
+			</td>
+			<td >
+
+				<table  border="1"  >
+			<tr>
+			<td>
+						<table align="center"   border="0" cellpadding="0" cellspacing="0" >
+							
+							
+
+								<% if(typeof errs !== 'undefined'){ %>
+								<% for(var i = 0; i < errs.length; i++) { %>
+								
+								
+                            <tr>
+							<td>
+							
+						<img src="<%=errs[i].picture %>" style=width:80px;height:80px;>
+							
+							</td>
+					<td >
+
+							&nbsp;
+					</td>
+		
+						<td>
+					
+						name:<%=errs[i].product_name %>
+
+						</td>
+						<td >
+
+							&nbsp;
+					</td>
+						<td>
+						
+						SIZE:<%=errs[i].size %>
+
+						
+
+							</td>
+							<td>
+						 &nbsp;
+						</td>
+						
+							<td>
+								quantity:<%=errs[i].quantity%>
+
+						 
+				
+						 </td>
+						 
+						 
+						 
+						 <td>
+							&nbsp;
+							</td>
+						 
+						 
+						 <td>
+							tk: <%=errs[i].total_price %>
+
+						
+				
+                        
+						 </td>
+						 
+						 <td>
+							&nbsp;
+							</td>
+						 
+						 
+						 <td>
+							<td align="right"> <a href='/cart?product_name=<%=errs[i].product_name%>'> <button type= "button">remove</button> </a></td>
+                   
+						</td>
+												<hr>
+							</tr>
+
+
+
+							<% } %>
+     								<% } %>
+
+
+
+
+							<tr>
+							<td>
+						<hr>
+							</td>
+							</tr>
+							
+						
+							
+						</table>
+
+			</td>
+		</tr>
+</table>			
+	
+<input type ="button" value ="Proceed to checkout" onclick="window.location.href='indexx.php'">
+	</tr>
+
+		</table>
+
+
+				
+			</td>
+		</tr>
+	</table>
+	
+	
+	<br/>
+	<br/>
+   
+	
+
+</content>
+<br/>
+<br/>
+<br/>
+<br/>
+<% include ../partials/footer %>
+</body>
+</html>
+
+
+
+
