@@ -33,8 +33,10 @@
                         <th>Product name</th>
                         <th>Price</th>
                         <th>Size</th>
+                        <th>Description</th>
+                        <th>Catagory ID</th>
+                        <th>Product Image</th>
                         <th>Quantity</th>
-                        <th>Image</th>
                     </tr> 
                   </thead>
                   <tbody>
@@ -42,15 +44,17 @@
 						
                           <tr>
                             <td align="center">
-                              <a class="btn btn-default" href="/admin/edit/<%= productInfo[i].id %>"><em class="fa fa-pencil"></em></a>
-                              <a class="btn btn-danger" href="/admin/delete/<%= productInfo[i].id %>"><em class="fa fa-trash"></em></a>
+                              <a class="btn btn-default" href="/admin/edit/<%= productInfo[i].product_id %>"><em class="fa fa-pencil"></em></a>
+                              <a class="btn btn-danger" href="/admin/delete/<%= productInfo[i].product_id %>"><em class="fa fa-trash"></em></a>
                             </td>
-                            <td class="hidden-xs"><%= productInfo[i].id %></td>
-                            <td><%= productInfo[i].productname %></td>
+                            <td class="hidden-xs"><%= productInfo[i].product_id %></td>
+                            <td><%= productInfo[i].product_name %></td>
                             <td><%= productInfo[i].price %> BDT</td>
                             <td><%= productInfo[i].size %></td>
+                            <td><%= productInfo[i].discription %></td>
+                            <td><%= productInfo[i].category_id %></td>
+                            <td><img src="<%= productInfo[i].picture %>" style="height: 20%; width: 20%;"></td>
                             <td><%= productInfo[i].quantity %></td>
-                            <td><%= productInfo[i].image %></td>
                           </tr>
                           
                           <% } %>

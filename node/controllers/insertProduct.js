@@ -17,7 +17,7 @@ router.post('/', function(req, res, next){
 
 	// var oldpath = next.image.path;
 
-	console.log(oldpath);
+	// console.log(oldpath);
 
 	var productDetails = {
 		productName: req.body.productName,

@@ -1,9 +1,9 @@
 var db = require('./db');
 
 var validateUser = function(productDetails, callback){
-	var sql = "insert into product (productname, price, size, quantity, image) values (?,?,?,?,?)";
+	var sql = "insert into product (product_name, price, discription, quantity, picture, category_id) values (?,?,?,?,?,?)";
 
-	var param = [productDetails.productName, productDetails.productPrice, productDetails.productSize, productDetails.productQuantity, productDetails.image];
+	var param = [productDetails.productName, productDetails.productPrice, productDetails.productSize, productDetails.productQuantity, "/images/"+ productDetails.image, 1];
 	
 	db.getData(sql, param ,function(result){
 		if(result == null || result.length == 0)

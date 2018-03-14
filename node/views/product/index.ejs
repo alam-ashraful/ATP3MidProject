@@ -1,41 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Insert Product</title>
-	<meta charset="utf-8">
+    <meta charset="utf-8">
+    <title>shopping cart - Bootdey.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+    	.img-cart {
+		    display: block;
+		    max-width: 50px;
+		    height: auto;
+		    margin-left: auto;
+		    margin-right: auto;
+		}
+		table tr td{
+		    border:1px solid #FFFFFF;    
+		}
+
+		table tr th {
+		    background:#eee;    
+		}
+
+		.panel-shadow {
+		    box-shadow: rgba(0, 0, 0, 0.3) 7px 7px 7px;
+		}
+    </style>
 </head>
 <body>
-	<div>
-		<table>
-			<form method="post">
-				<tr>
-					<td>Product name: </td>
-					<td><input type="text" name="productName"></td>
-				</tr>
-				<tr>
-					<td>Product price: </td>
-					<td><input type="text" name="productPrice"></td>
-				</tr>
-				<tr>
-					<td>Product size: </td>
-					<td><input type="text" name="productSize"></td>
-				</tr>
-				<tr>
-					<td>Product quantity: </td>
-					<td><input type="text" name="productQuantity"></td>
-				</tr>
-				<tr>
-					<td>Select image to upload: </td>
-					<td>
-					    <input type="file" name="image" id="fileToUpload">
-					</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td><input type="submit" name="submit" value="submit"></td>
-				</tr>
-			</form>
-		</table>
-	</div>
+	<br>
+	<br>
+	<br>
+<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+<div class="container bootstrap snippet">
+    <div class="col-md-12 col-sm-8 content">
+        <div class="row">
+            <div class="col-md-12">
+                <ol class="breadcrumb">
+                  <li><a href="/Admin/Product">Dashboard</a></li>
+                  <li class="active">Insert product</li>
+                </ol>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-info panel-shadow">
+                    <div class="panel-heading">
+                        <h3>
+                            <img class="img-circle img-thumbnail" src="https://bootdey.com/img/Content/user_3.jpg">
+                            Admin
+                        </h3>
+                    </div>
+                    <div class="panel-body"> 
+                        <div class="table-responsive">
+                        	<form method="post">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>Product name</th>
+                                <th>Price</th>
+                                <th>Description</th>
+                                <th>Qty</th>                                
+                                <th>Picture</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                    	<hr />
+                                    	<input class="form-control" type="text" value="" name="productName">
+                                    	<hr />
+                                    </td>
+                                    <td>
+                                    	<hr />
+                                    	<input class="form-control" type="text" value="" name="productPrice">
+                                    	<hr />
+                                    </td>
+                                    <td>
+                                    	<hr />
+                                        <input class="form-control" type="text" value="" name="productSize">
+                                        <hr />
+                                    </td>
+                                    <td>
+                                    	<hr />
+                                    	<input class="form-control" type="text" value="" name="productQuantity">
+                                    	<hr />
+                                    </td>
+                                    <td>
+                                    	<hr />
+                                    	<strong>Insert an image</strong>
+                                    	<label class="fa fa-image"></label>
+                                    	<input type="file" name="image" id="fileToUpload">
+                                    </td>
+                                </tr>
+                                <tr>
+                                	<td>
+                                    	<input type="submit" name="submit" value="submit" class="btn btn-primary">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </form>
+                    </div>
+                </div>
+                </div>
+                <a href="/Admin/Product" class="btn btn-success"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;Go back to Product List</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	
+</script>
 </body>
 </html>

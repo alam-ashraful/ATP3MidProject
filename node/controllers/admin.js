@@ -57,7 +57,7 @@ router.get('/delete/:id', function(req, res){
 	  database: 'project'
 	});
 
-	connection.query("DELETE FROM product  WHERE id = ? ",[id], function(err, rows)
+	connection.query("DELETE FROM product  WHERE product_id = ? ",[id], function(err, rows)
     {
          if(err)
              console.log("Error deleting : %s ",err );
