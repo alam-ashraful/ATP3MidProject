@@ -26,7 +26,7 @@ productlist.showproduct(category, function(valid){
 		else
 		{
 			//res.render('login/index',{errs: "wrong password"});
-			res.send("productlistwww ");
+			res.send("No Product found on database!");
 		}
 	});
 });
