@@ -30,12 +30,12 @@ router.post('/', function(req, res){
 			}else if(valid=="admin"){
 				user.type = "admin";
 				req.session.loggedUser = user;
-				res.redirect('/admin')
+				res.redirect('/admin');
 			}
 		}
 		else
 		{
-			res.render('login/index',{errs: "wrong password"});
+			res.render('login/index',{errs: "Wrong password !"});
 		}
 	});
 
