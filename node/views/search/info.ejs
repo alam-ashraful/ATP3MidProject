@@ -1,44 +1,86 @@
-<!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-</head>
 <body>
 
-	<% include ../partials/head %> 
+<% include ../partials/head %> 
 
-	<% include ../partials/header %>
+		<% include ../partials/header %>
+		<% include ../search/index %>
+		<% var count=1; %>
 
-	<% include ../search/index %>
-
-	<h2>SEARCH</h2>
-	<table border="1">
+<content>
+	<table style="width:100%" border="0" cellpadding="70" cellspacing="0">
 		<tr>
-			<th>ID</th>
-			<th>Product Name</th>
-			<th>Picture</th>
-			<th>PRICE</th>
-			<th>QUANTITY</th>
-			<th>DISCRIPTION</th>
-			<th>CATAGORY ID</th>
-		</tr>
-		<% for(var i = 0; i < products.length; i++){ %>
-		<tr>
-			<td><%= products[i].product_id %></td>	
-			<td><%= products[i].product_name %></td>	
-			<td><img src="<%= products[i].picture %>"></td>	
-			<td><%= products[i].price %></td>	
-			<td><%= products[i].quantity %></td>	
-			<td><%= products[i].discription %></td>	
-			<td><%= products[i].catagory_id %></td>
+			<td valign="top">
+				<% include ../partials/sidebar%>
+			</td>
 			
-		</tr>
-		<% } %>	
+			<td >
+					
+					<table border="0" >
+						<tr>
+					
+							<% if(typeof products !== 'undefined'){ %>		
+					
+			<% for(var i = 0; i < products.length; i++) { %>
 
-	</table>
+						<td>
+				 		<table border="0">
+							<tr>
+							<td colspan="5"><a href='/detail?product_id=<%=products[i].product_id %>'> <img src="<%= products[i].picture %>" 		 style= "width:290px;height:230px "></a>
+									  </td>
+							</tr>
+						<tr>
+							<td colspan="5"><%= products[i].product_name %></td>
+					 	</tr>
+						<tr>
+							<td colspan=" 3" >  ৳  <%= products[i].price %></td>
+							<td align= "right"> <a href='/detail?product_id=<%=products[i].product_id %>'> <button type="button"  >Buy Now</button> </a></td>
+						</tr>
 
-	<!--<p>Click<a href="/home/info/5">Here</a> for info</p>
-	<br>
-	<a href="/logout">LOGOUT</a>-->
+							<% count++ %>
+
+							<% if(count%4==0){    %>
+					   		</table>
+							</td>
+						    <tr>
+					<%   } else { %>
+						 	</table>
+							</td> 
+					<%   } %>
+
+						
+						
+							
+
+
+
+
+							
+								<% } %>
+								<% } %>
+
+								</tr>
+					 		</table>
+				
+			</tr>
+		</table>
+
+		
+	
+	<br/>
+	<br/>
+   
+	
+
+</content>
+<br/>
+<br/>
+<br/>
+<br/>
+<% include ../partials/footer %>
 </body>
 </html>
+
+
+
+
