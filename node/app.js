@@ -49,9 +49,13 @@ app.all('*',function(req,res,next){
 	{
 		next();
 	}
+});*/
+
+app.get('/', function(req, res){
+	res.redirect('/home');
 });
 
-*/
+
 //// Route
 //app.use('/login', login);
 app.use('/home', home);
@@ -63,8 +67,6 @@ app.use('/productlist',productlist);
 app.use('/detail',productdetail);
 app.use('/cart',cart);
 app.use('/product',insetProduct);
-app.use('/product',insetProduct);
-
 
 
 // Server startup
