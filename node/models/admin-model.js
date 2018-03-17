@@ -56,20 +56,20 @@ var deleteProductData = function(productId){
 	
 };
 
-var editProductData = function(productId){
+var editProductData = function(data, callback){
 
-	var sql = "select * from product";
-	param = [productId];
-	
-	db.editProductData(sql, param, function(result){
+	var sql = "select * from product where product_id=?";
+	param = [data.pid];
+
+	db.getData(sql, param, function(result){
 
 		if(result==null)
 		{
-			return;
+			callback(null);
 		}
 		else
 		{
-			return result;
+			callback(result);
 		}
 	});
 };

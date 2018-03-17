@@ -21,15 +21,19 @@ router.get('/product', function(req, res){
 	});
 });
 
-router.get('/edit:id', function(req, res){
+router.get('/edit/:id', function(req, res){
 
-	var productId = req.params.id;
+	data = {
+		pid: req.params.id
+	};
 
-	adminModel.editProductData(function(productId){
-
+	adminModel.editProductData(data, function(result){
+		if(result!=null){
+			res.render('admin/update',{result: result});
+		}else{
+			res.render('admin/product');
+		}
 	});
-
-	res.render('admin/product');
 });
 
 router.get('/delete/:id', function(req, res){

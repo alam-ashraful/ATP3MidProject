@@ -44,6 +44,7 @@
                     </tr> 
                   </thead>
                   <tbody>
+                    <% if (typeof productInfo!='undefined') { %>
                   	<% for(var i=0; i <productInfo.length; i++) { %>
 						
                           <tr>
@@ -70,6 +71,7 @@
               <div class="panel-footer">
                 <div class="row">
                   <div class="col col-xs-4">Number of product(s) count: <%= productInfo.length %>
+                    <% } %>
                   </div>
                     </ul>
                   </div>

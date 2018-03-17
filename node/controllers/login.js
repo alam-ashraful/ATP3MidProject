@@ -32,7 +32,6 @@ router.post('/', function(req, res){
 		}
 		else
 		{
-			console.log(obj.role);
 			res.render('login/index',{errs: "Wrong password !"});
 		}
 	});

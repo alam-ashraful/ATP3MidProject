@@ -69,22 +69,22 @@
                                 <tr>
                                     <td>
                                     	<hr />
-                                    	<input class="form-control" type="text" value="" name="productName">
+                                    	<input class="form-control" type="text" value="<%= result[0].product_name %>" name="productName">
                                     	<hr />
                                     </td>
                                     <td>
                                     	<hr />
-                                    	<input class="form-control" type="text" value="" name="productPrice">
+                                    	<input class="form-control" type="text" value="<%= result[0].price %>" name="productPrice">
                                     	<hr />
                                     </td>
                                     <td>
                                     	<hr />
-                                        <input class="form-control" type="text" value="" name="productSize">
+                                        <input class="form-control" type="text" value="<%= result[0].discription %>" name="productSize">
                                         <hr />
                                     </td>
                                     <td>
                                     	<hr />
-                                    	<input class="form-control" type="text" value="" name="productQuantity">
+                                    	<input class="form-control" type="text" value="<%= result[0].quantity %>" name="productQuantity">
                                     	<hr />
                                     </td>
                                     <td>
@@ -96,7 +96,7 @@
                                 </tr>
                                 <tr>
                                 	<td>
-                                    	<input type="submit" name="submit" value="submit" class="btn btn-primary">
+                                    	<input type="submit" name="submit" value="update" class="btn btn-primary">
                                     </td>
                                 </tr>
                             </tbody>
