@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<% include ../partials/head %> 
+
+	<% include ../partials/header %>
+
+	<% include ../search/index %>
+
+	<h2>SEARCH</h2>
+	<table border="1">
+		<tr>
+			<th>ID</th>
+			<th>Product Name</th>
+			<th>Picture</th>
+			<th>PRICE</th>
+			<th>QUANTITY</th>
+			<th>DISCRIPTION</th>
+			<th>CATAGORY ID</th>
+		</tr>
+		<% for(var i = 0; i < products.length; i++){ %>
+		<tr>
+			<td><%= products[i].product_id %></td>	
+			<td><%= products[i].product_name %></td>	
+			<td><img src="<%= products[i].picture %>"></td>	
+			<td><%= products[i].price %></td>	
+			<td><%= products[i].quantity %></td>	
+			<td><%= products[i].discription %></td>	
+			<td><%= products[i].catagory_id %></td>
+			
+		</tr>
+		<% } %>	
+
+	</table>
+
+	<!--<p>Click<a href="/home/info/5">Here</a> for info</p>
+	<br>
+	<a href="/logout">LOGOUT</a>-->
+</body>
+</html>

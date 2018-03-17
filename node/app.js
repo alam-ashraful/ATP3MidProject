@@ -22,6 +22,8 @@ var cart = require('./controllers/cart');
 
 var insetProduct = require('./controllers/insertProduct');
 
+var searchProduct = require('./controllers/searchProduct');
+
 
 
 // Configure
@@ -67,6 +69,8 @@ app.use('/productlist',productlist);
 app.use('/detail',productdetail);
 app.use('/cart',cart);
 app.use('/product',insetProduct);
+
+app.use('/searchProduct',searchProduct);
 
 
 // Server startup

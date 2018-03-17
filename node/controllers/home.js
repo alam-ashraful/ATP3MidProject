@@ -6,18 +6,17 @@ var router = express.Router();
 
 // Request Handler
 router.get('/', function(req, res){
-
-
 	
-
-		
     // console.log(result[2].id);
 	//res.send(result);
 		res.render('home/home');
+		//res.redirect('/searchProduct');
 
 
 
 });
+
+
 /*
 router.post('/', function(req, res){
 	

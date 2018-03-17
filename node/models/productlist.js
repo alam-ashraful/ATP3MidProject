@@ -1,7 +1,7 @@
 var db = require('./db');
 
 var showproduct = function(category, callback){
-	var sql = "SELECT * FROM product WHERE category_id=?";
+	var sql = "SELECT * FROM product WHERE catagory_id=?";
 	var param = [category.category_id];
 		 //sres.send(category.category_id);
 		 //console.log(category.category_id);
