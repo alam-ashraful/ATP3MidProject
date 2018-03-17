@@ -51,6 +51,7 @@ productdetail.showproduct(id, function(valid){
 			//console.log(req.body.quantity);
 				//res.render('home/home');
 					product={
+		product_id : valid[0].product_id,				
 		product_name : valid[0].product_name,
 		picture : valid[0].picture,
 		size : req.body.size,

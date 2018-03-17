@@ -22,6 +22,7 @@ var productdetail = require('./controllers/detail');
 var cart = require('./controllers/cart');
 
 var insetProduct = require('./controllers/insertProduct');
+var checkout = require('./controllers/checkout');
 
 
 
@@ -66,7 +67,7 @@ app.use('/detail',productdetail);
 app.use('/cart',cart);
 app.use('/product',insetProduct);
 app.use('/product',insetProduct);
-
+app.use('/checkout',checkout);
 
 
 // Server startup
