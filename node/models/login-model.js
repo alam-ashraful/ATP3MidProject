@@ -8,21 +8,11 @@ var validateUser = function(user, callback){
 	db.getData(sql, param ,function(result){
 		if(result == null || result.length == 0)
 		{
-			// callback(false);
-			var sql2 = "SELECT * FROM admin WHERE username=? AND password=?";
-
-			db.getData(sql2, param ,function(result2){
-			if(result2 == null || result2.length == 0)
-			{
-				callback("admin");
-			}else{
-				callback("invalid");
-			}
-		});
-	}
-		else
-		{
-			callback("user");
+			callback(false);
+			// console.log(result);
+		}else{
+			callback(result);
+			// console.log(result);
 		}
 
 	});

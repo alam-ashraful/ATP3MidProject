@@ -2,8 +2,8 @@ var db = require('./db');
 
 var getAdminData = function(callback){
 
-	var sql = "select * from admin where username=? and password=?";
-	var param = ["Admin", "123456"];
+	var sql = "select * from user where username=? and password=? and role=?";
+	var param = ["admin", "admin", "admin"];
 	
 	db.getAdminData(sql, param, function(result){
 

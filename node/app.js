@@ -12,6 +12,7 @@ var expressSession=require('express-session');
 
 var home = require('./controllers/home');
 var login = require('./controllers/login');
+var logout = require('./controllers/login');
 var registration = require('./controllers/registration');
 var checkUser=require('./controllers/uniqueuser');
 var admin = require('./controllers/admin');
@@ -58,6 +59,7 @@ app.use('/home', home);
 app.use('/registration', registration);
 app.use('/uniqueuser',checkUser);
 app.use('/login',login);
+app.use('/logout',logout);
 app.use('/admin',admin);
 app.use('/productlist',productlist);
 app.use('/detail',productdetail);

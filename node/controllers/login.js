@@ -16,25 +16,23 @@ router.post('/', function(req, res){
 		password: req.body.password
 	};
 
-	console.log(user);
-
 	loginModel.validateUser(user, function(valid){
-		if(valid=="admin" || valid=="user")
+
+		if(valid[0].role == 'admin' || valid[0].role == 'user')
 		{
-			// res.send('loged in');
-			
-			if (valid=="user") {
-				user.type = "user";
-				req.session.loggedUser = user;
+			if (valid[0].role == "user") {
+				// user.type = "user";
+				// req.session.loggedUser = user;
 				res.redirect('/home');
-			}else if(valid=="admin"){
-				user.type = "admin";
-				req.session.loggedUser = user;
+			}else if(valid[0].role == "admin"){
+				// user.type = "admin";
+				// req.session.loggedUser = user;
 				res.redirect('/admin');
 			}
 		}
 		else
 		{
+			console.log(obj.role);
 			res.render('login/index',{errs: "Wrong password !"});
 		}
 	});
