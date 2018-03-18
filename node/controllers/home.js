@@ -13,8 +13,9 @@ userr=req.session.loggedUser;
 		
     // console.log(result[2].id);
 	//res.send(user);
-		res.render('home/home',{log:userr});
+		//res.render('home/home',{log:userr});
 	//	res.render('edit profile/editprofile');
+		res.render('thnx/thnx',{log:userr});
 
 
 
