@@ -28,7 +28,7 @@ router.post('/', function(req, res){
 		};
 
 		console.log(product_name);
-	
+
 	productlist.showSearchProduct(product_name, function(valid){
 		if(valid)
 		{
@@ -37,7 +37,7 @@ router.post('/', function(req, res){
 		}
 		else
 		{
-			res.send("No Product found on database!");
+			res.render('home/home');
 		}
 	});
 });
