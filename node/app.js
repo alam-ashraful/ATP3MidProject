@@ -25,6 +25,7 @@ var insetProduct = require('./controllers/insertProduct');
 var checkout = require('./controllers/checkout');
 var viewprofile = require('./controllers/viewprofile');
 var editprofile = require('./controllers/editprofile');
+var userLogout = require('./controllers/userLogout');
 
 
 
@@ -72,6 +73,7 @@ app.use('/product',insetProduct);
 app.use('/checkout',checkout);
 app.use('/viewprofile',viewprofile);
 app.use('/editprofile',editprofile);
+app.use('/userLogout',userLogout);
 
 
 // Server startup
