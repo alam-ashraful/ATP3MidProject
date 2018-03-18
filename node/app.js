@@ -23,6 +23,8 @@ var cart = require('./controllers/cart');
 
 var insetProduct = require('./controllers/insertProduct');
 var checkout = require('./controllers/checkout');
+var viewprofile = require('./controllers/viewprofile');
+var editprofile = require('./controllers/editprofile');
 
 
 
@@ -68,6 +70,8 @@ app.use('/cart',cart);
 app.use('/product',insetProduct);
 app.use('/product',insetProduct);
 app.use('/checkout',checkout);
+app.use('/viewprofile',viewprofile);
+app.use('/editprofile',editprofile);
 
 
 // Server startup

@@ -8,7 +8,7 @@ router.get('/', function(req, res){
 
 	//req.session.cart=[];
 		var product_name= req.query.product_name;
-		console.log(product_name);
+		//console.log(product_name);
 
 
 	var	productlist=[];
@@ -28,13 +28,13 @@ router.get('/', function(req, res){
 
 
 		
-
+userr=req.session.loggedUser;
 
 
 	//req.session.cart.pop(product.product_name);
   // console.log(req.query.product_name);
 	//res.send(result);
-		res.render('cart/cart',{errs:req.session.cart});
+		res.render('cart/cart',{log:userr});
 
 
 

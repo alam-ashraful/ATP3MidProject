@@ -20,7 +20,8 @@ productdetail.showproduct(product, function(valid){
 			//req.session.loggedUser = user;
 			//console.log(valid);
 				//res.render('home/home');
-			res.render('detail/detail',{errs: valid});
+				userr=req.session.loggedUser;
+			res.render('detail/detail',{errs: valid,log:userr});
 			 
 		}
 		else
@@ -56,6 +57,7 @@ productdetail.showproduct(id, function(valid){
 		picture : valid[0].picture,
 		size : req.body.size,
 		quantity: req.body.quantity,
+		price:valid[0].price,
 		total_price: req.body.quantity*	valid[0].price
 	};
 			//req.session.cart=[];
@@ -75,9 +77,9 @@ productdetail.showproduct(id, function(valid){
 	
 //console.log(req.session.cart);
 
+userr=req.session.loggedUser;
 
-
-			res.render('cart/cart',{errs:req.session.cart});
+			res.render('cart/cart',{errs:req.session.cart,log:userr});
 			 
 		}
 

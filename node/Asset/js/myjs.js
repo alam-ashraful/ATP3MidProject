@@ -10,6 +10,8 @@ $(document).ready(function() {
 	var address;
 //User validation
 	var usernameField = $("#username");
+	
+
 	usernameField.on("change", function() {
 	var value = usernameField.val();
 		$.post("/uniqueuser/username", { value }, function(data, xhr) {

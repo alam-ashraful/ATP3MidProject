@@ -1,0 +1,73 @@
+<html>
+<style>
+	.picture img{
+		width:300px;
+		height:300px;
+    cursor: -moz-zoom-in; 
+    cursor: -webkit-zoom-in; 
+    cursor: zoom-in;
+	}
+	</style>
+<body>
+
+<% include ../partials/head %> 
+
+		<% include ../partials/header %>
+		<% var count=1; %>
+
+<content>
+	<table style="width:100%" border="0" cellpadding="70" cellspacing="0">
+		<tr>
+			<td valign="top">
+				<% include ../partials/sidebar%>
+			</td>
+			
+			<td >
+
+				<center><h1>Thank You!<h1>
+					<% if(typeof errs !== 'undefined'){ %>
+		<h3>order id: <%=errs.userid%></h3>
+			<%}%>
+		<p>
+		We have received your order. If you need to confirm any information regarding your <br/>
+		purchase, a kine felun custmer service will call you shortly.Otherwise your order<br/> will be automatically confirmed.
+		
+		</p>
+	</center>
+	<hr/>
+	<!--<h3>TRACK YOUR ORDER: </h3><br/>
+	<center>
+	<p><b>You can track your order My Account > My Orders</b></p><br/>-->
+	<!--<input type="submit" value="My Orders" onclick="window.location.href='orders.php'"  size="50" >-->
+	</center>
+	<hr/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+
+			</td>	
+					
+		</tr>
+	</table>
+		
+
+		
+	
+	<br/>
+	<br/>
+   
+	
+
+</content>
+<br/>
+<br/>
+<br/>
+<br/>
+<% include ../partials/footer %>
+</body>
+</html>
+
+
+
+

@@ -31,10 +31,11 @@ module.exports={
 			}
 		});
 	},
-	userprofileupdate : function(data,callback){
-		var sql="UPDATE `user` SET `name`=?,`email`=?,`phone`=?,`address`=? WHERE `username`=?";
-		var param=[data.name,data.email,data.phone,data.address,data.username];
-
+	
+	profileupdate : function(data,callback){
+		var sql="UPDATE `user` SET `username`=?,`email`=?,`contact`=?,`address`=? WHERE `username`=?";
+		var param=[data.username,data.email,data.contact,data.address,data.name];
+		//console.log(param);
 		db.updateData(sql,param,function(result){
 			if(result==null || result.length==0)
 			{

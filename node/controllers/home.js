@@ -9,11 +9,12 @@ router.get('/', function(req, res){
 
 
 	
-
+userr=req.session.loggedUser;
 		
     // console.log(result[2].id);
-	//res.send(result);
-		res.render('home/home');
+	//res.send(user);
+		res.render('home/home',{log:userr});
+	//	res.render('edit profile/editprofile');
 
 
 

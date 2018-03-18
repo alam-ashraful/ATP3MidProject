@@ -22,11 +22,11 @@ router.post('/', function(req, res){
 		{
 			if (valid[0].role == "user") {
 				// user.type = "user";
-				// req.session.loggedUser = user;
+				req.session.loggedUser = user;
 				res.redirect('/home');
 			}else if(valid[0].role == "admin"){
 				// user.type = "admin";
-				// req.session.loggedUser = user;
+				req.session.loggedUser = user;
 				res.redirect('/admin');
 			}
 		}

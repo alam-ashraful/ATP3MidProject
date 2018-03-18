@@ -20,7 +20,8 @@ productlist.showproduct(category, function(valid){
 			//req.session.loggedUser = user;
 			//console.log(valid);
 				//res.render('home/home');
-			res.render('product list/productlist',{errs: valid});
+				userr=req.session.loggedUser;
+			res.render('product list/productlist',{errs: valid,log:userr});
 			 
 		}
 		else
