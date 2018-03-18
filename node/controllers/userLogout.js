@@ -5,7 +5,7 @@ var router = express.Router();
 // Request Handler
 router.get('/', function(req, res){
 	// session clear
-	req.session.loggedUser.destroy(function(){
+	req.session.destroy(function(){
 		res.redirect('/login');
 	});
 });

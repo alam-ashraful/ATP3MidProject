@@ -16,7 +16,10 @@ router.post('/', function(req, res){
 		password: req.body.password
 	};
 
+
+
 	loginModel.validateUser(user, function(valid){
+		if(valid){
 
 		if(valid[0].role == 'admin' || valid[0].role == 'user')
 		{
@@ -30,8 +33,10 @@ router.post('/', function(req, res){
 				res.redirect('/admin');
 			}
 		}
+	}
 		else
-		{
+		{ 
+
 			res.render('login/index',{errs: "Wrong password !"});
 		}
 	});
