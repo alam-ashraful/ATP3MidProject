@@ -34,7 +34,7 @@ userr=req.session.loggedUser;
 	//req.session.cart.pop(product.product_name);
   // console.log(req.query.product_name);
 	//res.send(result);
-		res.render('cart/cart',{log:userr});
+		res.render('cart/cart',{errs:req.session.cart,log:userr});
 
 
 
