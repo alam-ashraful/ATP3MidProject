@@ -36,21 +36,35 @@ router.get('/edit/:id', function(req, res){
 	});
 });
 
+router.post('/edit/:id', function(req, res){
+
+	var productDetails = {
+		product_id: req.params.id,
+		productCatagoryId: req.body.productCatagoryId,
+		productName: req.body.productName,
+		productPrice: req.body.productPrice,
+		productSize: req.body.productSize,
+		productQuantity: req.body.productQuantity,
+		image: req.body.image
+	};
+
+	adminModel.updateProduct(productDetails, function(valid){
+		if(valid!=null)
+		{
+			res.redirect('/admin/product');
+			console.log('Product inserted');
+		}
+		else
+		{
+			console.log('Product not inserted');
+			res.render('product/index');
+		}
+	});
+
+});
+
 router.get('/delete/:id', function(req, res){
-/*
-	var productId = {
-		productId: req.params.id
-	}
 
-	console.log(productId);
-
-	if(productId!=null){
-		adminModel.deleteProductData(function(object){
-			res.render('admin/product');
-		});
-	}else{
-		res.render('admin/product');
-	}*/
 	var id = req.params.id;
 	
 	var mysql = require('mysql');
@@ -71,38 +85,5 @@ router.get('/delete/:id', function(req, res){
     });
 });
 
-/*
-router.post('/', function(req, res){
-	
-	user={
-
-		name : req.body.username,
-		password : req.body.password,
-		gender : req.body.gender,
-		address : req.body.address,
-		department : req.body.department,
-		email : req.body.email
-	};
-	
-		//res.send(user);
-		//console.log(user);
-		
-		registration.insertuser(user, function(valid){
-		if(valid)
-		{
-			//res.render('home/index');
-			//res.redirect('/registration');
-			res.send("successfull");
-		}
-		else
-		{
-			res.redirect('/registration');
-		}
-
-});
-
-
-});
-*/
 // Export (mandatory)
 module.exports = router;
