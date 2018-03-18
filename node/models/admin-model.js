@@ -74,8 +74,27 @@ var editProductData = function(data, callback){
 	});
 };
 
+var updateProduct = function(data, callback){
+
+	var sql = "UPDATE `product` SET `product_name`=?,`picture`=?,`price`=?,`quantity`=?,`discription`=?,`category_id`=? WHERE product_id=?";
+	param = [data.productName, "/images/"+ data.image, data.productPrice, data.productQuantity, data.productSize, data.productCatagoryId, data.product_id];
+
+	db.getData(sql, param, function(result){
+
+		if(result==null)
+		{
+			callback(null);
+		}
+		else
+		{
+			callback(result);
+		}
+	});
+};
+
 // Export mandatory
 module.exports.getAdminData = getAdminData;
 module.exports.getProductData = getProductData;
 module.exports.deleteProductData = deleteProductData;
 module.exports.editProductData = editProductData;
+module.exports.updateProduct = updateProduct;

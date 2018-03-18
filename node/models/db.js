@@ -45,7 +45,6 @@ module.exports = {
 
 		getData : function(sql,param,callback){
 			
-
 		if(param==null)
 		{
 			connection.query(sql,function(error,result){

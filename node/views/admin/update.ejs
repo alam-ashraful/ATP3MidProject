@@ -39,7 +39,7 @@
                 <ol class="breadcrumb">
                 	<li class="active"><a href="/admin">Profile</a></li>
                   <li><a href="/Admin/Product">Dashboard</a></li>
-                  <li class="active">Insert product</li>
+                  <li class="active">Update product</li>
                 </ol>
             </div>
         </div>
@@ -61,7 +61,8 @@
                                 <th>Product name</th>
                                 <th>Price</th>
                                 <th>Description</th>
-                                <th>Qty</th>                                
+                                <th>Qty</th>
+                                <th>Catagory ID</th>                                
                                 <th>Picture</th>
                             </tr>
                             </thead>
@@ -85,6 +86,11 @@
                                     <td>
                                     	<hr />
                                     	<input class="form-control" type="text" value="<%= result[0].quantity %>" name="productQuantity">
+                                    	<hr />
+                                    </td>
+                                    <td>
+                                    	<hr />
+                                    	<input class="form-control" type="text" value="<%= result[0].category_id %>" name="productCatagoryId">
                                     	<hr />
                                     </td>
                                     <td>
