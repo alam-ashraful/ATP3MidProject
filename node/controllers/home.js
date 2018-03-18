@@ -1,7 +1,7 @@
 // Declaration
 var express = require('express');
 var router = express.Router();
-//var home = require.main.require('./models/home');
+var productlist = require.main.require('./models/productlist');
 
 
 // Request Handler
@@ -13,13 +13,35 @@ userr=req.session.loggedUser;
 		
     // console.log(result[2].id);
 	//res.send(user);
-		//res.render('home/home',{log:userr});
+		res.render('home/home',{log:userr});
 	//	res.render('edit profile/editprofile');
-		res.render('thnx/thnx',{log:userr});
 
 
 
 });
+
+
+router.post('/', function(req, res){
+
+	var product_name = {
+			product_name: req.body.search
+		};
+
+		console.log(product_name);
+	
+	productlist.showSearchProduct(product_name, function(valid){
+		if(valid)
+		{
+			userr = req.session.loggedUser;
+			res.render('product list/productlist',{errs: valid, log: userr});	 
+		}
+		else
+		{
+			res.send("No Product found on database!");
+		}
+	});
+});
+
 /*
 router.post('/', function(req, res){
 	

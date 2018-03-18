@@ -44,10 +44,11 @@ module.exports = {
 		},
 
 		getData : function(sql,param,callback){
-			
+
 		if(param==null)
 		{
 			connection.query(sql,function(error,result){
+				console.log(sql);
 				if (error) {
 					console.log(error);
 					callback(null);
