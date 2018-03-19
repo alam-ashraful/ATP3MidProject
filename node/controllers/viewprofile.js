@@ -13,7 +13,7 @@ router.get('/', function(req, res){
 			var data={
 				username: req.session.loggedUser.username
 			};
-			user.user(data,function(result){
+			user.useredit(data,function(result){
 				if(result!=null && result)
 				{
 					
