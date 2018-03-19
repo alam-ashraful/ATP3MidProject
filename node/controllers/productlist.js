@@ -32,4 +32,25 @@ productlist.showproduct(category, function(valid){
 	});
 });
 
+router.post('/', function(req, res){
+
+	var product_name = {
+			product_name: req.body.search
+		};
+
+		console.log(product_name);
+
+	productlist.showSearchProduct(product_name, function(valid){
+		if(valid)
+		{
+			userr = req.session.loggedUser;
+			res.render('product list/productlist',{errs: valid, log: userr});	 
+		}
+		else
+		{
+			res.render('home/home');
+		}
+	});
+});
+
 module.exports = router;
